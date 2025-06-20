@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Sentinel Bangladesh | Ethical Cybersecurity Experts</title>
-    <meta name="description" content="Bangladesh's premier ethical hacking and cybersecurity experts providing cutting-edge digital protection services">
-    <meta name="keywords" content="ethical hacking, cybersecurity, Bangladesh, penetration testing, vulnerability assessment">
+    <title>Cyber Sentinel Bangladesh | National Cybersecurity & Services Portal</title>
+    <meta name="description" content="Bangladesh's premier ethical hacking, cybersecurity experts and national services portal">
+    <meta name="keywords" content="ethical hacking, cybersecurity, Bangladesh, government services, digital Bangladesh">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
 :root {
@@ -17,6 +17,8 @@
   --text: #e0e0e0;
   --matrix-green: #00ff41;
   --hacker-red: #ff0033;
+  --service-primary: #006a4e; /* Bangladesh Green */
+  --service-secondary: #f42a41; /* Bangladesh Red */
 }
 
 body {
@@ -153,6 +155,7 @@ header::before {
 }
 
 /* Hacking Terminal Effect */
+
 .terminal-effect {
   max-width: 800px;
   margin: 30px auto 0;
@@ -287,6 +290,138 @@ nav {
   font-size: 1rem;
 }
 
+/* National Services Section */
+.services-portal-section {
+  background: linear-gradient(to bottom, rgba(0, 20, 15, 0.8), rgba(0, 10, 5, 0.9));
+  padding: 60px 20px;
+  position: relative;
+}
+.services-portal-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--service-primary), transparent);
+}
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-header h2 {
+  font-size: 2.2rem;
+  color: var(--matrix-green);
+  margin: 0 0 15px;
+  font-family: 'Share Tech Mono', monospace;
+}
+.section-header p {
+  color: var(--text);
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.search-box {
+  margin: 20px auto 40px;
+  text-align: center;
+  max-width: 800px;
+}
+.search-box input {
+  width: 70%;
+  padding: 12px 20px;
+  border: 2px solid var(--service-primary);
+  border-radius: 25px;
+  font-size: 16px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+}
+.search-box button {
+  padding: 12px 25px;
+  background-color: var(--service-secondary);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.search-box button:hover {
+  background-color: #d81b36;
+}
+
+.emergency-section {
+  background-color: rgba(255, 40, 65, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 30px 0;
+  border-left: 5px solid var(--service-secondary);
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.category-card {
+  background: rgba(10, 20, 15, 0.5);
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid rgba(0, 255, 65, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 255, 65, 0.1);
+  border-color: rgba(0, 255, 65, 0.4);
+}
+.category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--service-primary), var(--service-secondary));
+}
+
+.category-card h3 {
+  color: var(--secondary);
+  margin: 0 0 15px;
+  font-size: 1.3rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.service-list {
+  list-style-type: none;
+}
+.service-list li {
+  margin-bottom: 10px;
+}
+.service-list a {
+  color: var(--text);
+  text-decoration: none;
+  display: block;
+  padding: 8px 5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.service-list a:hover {
+  background-color: rgba(0, 255, 65, 0.1);
+  color: var(--secondary);
+  padding-left: 10px;
+}
+
 /* Core Values */
 .values-container {
   max-width: 1200px;
@@ -380,22 +515,6 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
 }
-.section-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.section-header h2 {
-  font-size: 2.2rem;
-  color: var(--matrix-green);
-  margin: 0 0 15px;
-  font-family: 'Share Tech Mono', monospace;
-}
-.section-header p {
-  color: var(--text);
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-}
 .objectives-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -431,14 +550,10 @@ nav {
   font-size: 1.3rem;
 }
 
-/* Services Section */
-.services-section {
+/* Cybersecurity Services Section */
+.security-services-section {
   padding: 80px 20px;
   background: var(--darker);
-}
-.services-container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 .services-grid {
   display: grid;
@@ -645,26 +760,6 @@ footer {
   pointer-events: none;
 }
 
-/* Particle Effects */
-.particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
-.particle {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background-color: var(--matrix-green);
-  border-radius: 50%;
-  opacity: 0.5;
-  animation: float 15s ease-in-out infinite;
-}
-
 /* Message Modal */
 .modal {
   display: none;
@@ -764,6 +859,14 @@ footer {
     margin: 20% auto;
     width: 90%;
   }
+  .search-box input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .search-box button {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 @media (max-width: 480px) {
   .logo-text h1 {
@@ -809,21 +912,21 @@ footer {
         <button id="englishBtn" class="lang-btn">English</button>
     </div>
 
-    <header>
+<header>
         <div class="logo-container">
-            <a href="https://cybersentinelbangladesh.com" class="logo-link">
+            <a href="https://cybersentinelbangladesh.github.io/CSB/" class="logo-link">
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqYfieyUu_nKVGzUhhqTu7_lueDyVx6QwgjYHvrWNrIHqUUMwHV3eS9iX51w4jQVWZuhHli8tLAIZalklumtfzurXixncr371q4KU_iZu7dCXwfloxVI8WciPfSOwsRBNhwG6vpL3-kF3JLoLpIngPELYe91W2_n0u0FTAYF8GlwFuUxsiLOLEltPvYyo/s1280/20250614_021418.png" alt="Cyber Sentinel Bangladesh Logo" class="logo-img">
             </a>
             <div class="logo-text">
                 <h1>Cyber Sentinel Bangladesh</h1>
-                <p class="bangla-text">বাংলাদেশের নৈতিক হ্যাকিং ও সাইবার নিরাপত্তা বিশেষজ্ঞ</p>
-                <p class="english-text" style="display:none">Ethical Hacking & Cybersecurity Experts of Bangladesh</p>
+                <p class="bangla-text">বাংলাদেশের নৈতিক হ্যাকিং, সাইবার নিরাপত্তা ও জাতীয় সেবা পোর্টাল</p>
+                <p class="english-text" style="display:none">Ethical Hacking, Cybersecurity & National Services Portal of Bangladesh</p>
             </div>
         </div>
 
         <div class="terminal-effect">
-            <div class="terminal-text bangla-text">$ বাংলাদেশের সাইবার নিরাপত্তা রক্ষায় আমরা সদা তৎপর...</div>
-            <div class="terminal-text english-text" style="display:none">$ Protecting Bangladesh's cyberspace 24/7...</div>
+            <div class="terminal-text bangla-text">$ বাংলাদেশের সাইবার নিরাপত্তা ও ডিজিটাল সেবা রক্ষায় আমরা সদা তৎপর...</div>
+            <div class="terminal-text english-text" style="display:none">$ Protecting Bangladesh's cyberspace and digital services 24/7...</div>
         </div>
     </header>
 
@@ -831,9 +934,9 @@ footer {
         <div class="nav-container">
             <ul class="nav-links">
                 <li><a href="#about" class="nav-link"><span class="bangla-text">আমাদের সম্পর্কে</span><span class="english-text" style="display:none">About Us</span></a></li>
+                <li><a href="#services-portal" class="nav-link"><span class="bangla-text">জাতীয় সেবা</span><span class="english-text" style="display:none">National Services</span></a></li>
                 <li><a href="#values" class="nav-link"><span class="bangla-text">আমাদের মূল্যবোধ</span><span class="english-text" style="display:none">Our Values</span></a></li>
-                <li><a href="#objectives" class="nav-link"><span class="bangla-text">আমাদের লক্ষ্য</span><span class="english-text" style="display:none">Objectives</span></a></li>
-                <li><a href="#services" class="nav-link"><span class="bangla-text">আমাদের সেবা</span><span class="english-text" style="display:none">Services</span></a></li>
+                <li><a href="#security-services" class="nav-link"><span class="bangla-text">সাইবার সেবা</span><span class="english-text" style="display:none">Cybersecurity</span></a></li>
                 <li><a href="#contact" class="nav-link"><span class="bangla-text">যোগাযোগ</span><span class="english-text" style="display:none">Contact</span></a></li>
             </ul>
         </div>
@@ -841,10 +944,150 @@ footer {
 
     <section id="about" class="mission-statement">
         <blockquote>
-            <p class="bangla-text">"জ্ঞান শক্তি, কিন্তু নীতিহীন হলে তা হুমকি। আমরা নৈতিক হ্যাকার - বাংলাদেশের সাইবার নিরাপত্তার রক্ষক।"</p>
-            <p class="english-text" style="display:none">"Knowledge is power, but without ethics, it's a threat. We are ethical hackers - guardians of Bangladesh's cybersecurity."</p>
+            <p class="bangla-text">"জ্ঞান শক্তি, কিন্তু নীতিহীন হলে তা হুমকি। আমরা নৈতিক হ্যাকার - বাংলাদেশের সাইবার নিরাপত্তা ও ডিজিটাল সেবার রক্ষক।"</p>
+            <p class="english-text" style="display:none">"Knowledge is power, but without ethics, it's a threat. We are ethical hackers - guardians of Bangladesh's cybersecurity and digital services."</p>
         </blockquote>
         <cite>Cyber Sentinel Bangladesh</cite>
+    </section>
+
+    <!-- National Services Portal Section -->
+    <section id="services-portal" class="services-portal-section">
+        <div class="services-container">
+            <div class="section-header">
+                <h2 class="bangla-text">বাংলাদেশের জাতীয় সেবা সমূহ</h2>
+                <h2 class="english-text" style="display:none">Bangladesh National Services</h2>
+                <p class="bangla-text">সরকারি ও বেসরকারি সকল সেবা এক ঠিকানায়</p>
+                <p class="english-text" style="display:none">All government and private services in one place</p>
+            </div>
+
+            <div class="search-box">
+                <input type="text" placeholder="সেবা খুঁজুন (যেমন: পাসপোর্ট, টিন, ভ্যাট...)" class="bangla-text">
+                <input type="text" placeholder="Search services (e.g. passport, TIN, VAT...)" class="english-text" style="display:none">
+                <button class="bangla-text">খুঁজুন</button>
+                <button class="english-text" style="display:none">Search</button>
+            </div>
+            
+            <div class="emergency-section">
+                <h3 class="bangla-text">জরুরি যোগাযোগ</h3>
+                <h3 class="english-text" style="display:none">Emergency Contacts</h3>
+                <div class="categories">
+                    <div class="category-card">
+                        <ul class="service-list">
+                            <li><a href="tel:999" class="bangla-text">ন্যাশনাল ইমার্জেন্সি সার্ভিস - ৯৯৯</a><a href="tel:999" class="english-text" style="display:none">National Emergency Service - 999</a></li>
+                            <li><a href="tel:109" class="bangla-text">ন্যাশনাল হেল্পলাইন - ১০৯</a><a href="tel:109" class="english-text" style="display:none">National Helpline - 109</a></li>
+                            <li><a href="tel:333" class="bangla-text">পুলিশ হেল্পলাইন - ৩৩৩</a><a href="tel:333" class="english-text" style="display:none">Police Helpline - 333</a></li>
+                        </ul>
+                    </div>
+                    <div class="category-card">
+                        <ul class="service-list">
+                            <li><a href="tel:16163" class="bangla-text">স্বাস্থ্য বাতায়ন - ১৬১৬৩</a><a href="tel:16163" class="english-text" style="display:none">Health Portal - 16163</a></li>
+                            <li><a href="tel:1090" class="bangla-text">নারী ও শিশু নির্যাতন - ১০৯০</a><a href="tel:1090" class="english-text" style="display:none">Women & Child Abuse - 1090</a></li>
+                            <li><a href="tel:1098" class="bangla-text">শিশু হেল্পলাইন - ১০৯৮</a><a href="tel:1098" class="english-text" style="display:none">Child Helpline - 1098</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="text-align: center; margin: 30px 0; color: var(--matrix-green);" class="bangla-text">সেবা ক্যাটাগরি</h3>
+            <h3 style="text-align: center; margin: 30px 0; color: var(--matrix-green);" class="english-text" style="display:none">Service Categories</h3>
+            
+            <div class="categories">
+                <div class="category-card">
+                    <h3 class="bangla-text">সরকারি সেবা</h3>
+                    <h3 class="english-text" style="display:none">Government Services</h3>
+                    <ul class="service-list">
+                        <li><a href="https://www.bangladesh.gov.bd/" target="_blank" class="bangla-text">বাংলাদেশ জাতীয় তথ্য বাতায়ন</a><a href="https://www.bangladesh.gov.bd/" target="_blank" class="english-text" style="display:none">Bangladesh National Portal</a></li>
+                        <li><a href="https://surokkha.gov.bd/" target="_blank" class="bangla-text">ভ্যাকসিন রেজিস্ট্রেশন (সুরক্ষা)</a><a href="https://surokkha.gov.bd/" target="_blank" class="english-text" style="display:none">Vaccine Registration (Surokkha)</a></li>
+                        <li><a href="https://www.epassport.gov.bd/" target="_blank" class="bangla-text">ই-পাসপোর্ট</a><a href="https://www.epassport.gov.bd/" target="_blank" class="english-text" style="display:none">E-Passport</a></li>
+                        <li><a href="https://www.nidw.gov.bd/" target="_blank" class="bangla-text">জাতীয় পরিচয়পত্র (NID)</a><a href="https://www.nidw.gov.bd/" target="_blank" class="english-text" style="display:none">National ID Card</a></li>
+                        <li><a href="https://www.taxnbr.gov.bd/" target="_blank" class="bangla-text">টিন সার্টিফিকেট</a><a href="https://www.taxnbr.gov.bd/" target="_blank" class="english-text" style="display:none">TIN Certificate</a></li>
+                    </ul>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="bangla-text">শিক্ষা</h3>
+                    <h3 class="english-text" style="display:none">Education</h3>
+                    <ul class="service-list">
+                        <li><a href="http://www.educationboard.gov.bd/" target="_blank" class="bangla-text">শিক্ষা বোর্ড</a><a href="http://www.educationboard.gov.bd/" target="_blank" class="english-text" style="display:none">Education Board</a></li>
+                        <li><a href="https://www.nu.ac.bd/" target="_blank" class="bangla-text">জাতীয় বিশ্ববিদ্যালয়</a><a href="https://www.nu.ac.bd/" target="_blank" class="english-text" style="display:none">National University</a></li>
+                        <li><a href="https://www.du.ac.bd/" target="_blank" class="bangla-text">ঢাকা বিশ্ববিদ্যালয়</a><a href="https://www.du.ac.bd/" target="_blank" class="english-text" style="display:none">Dhaka University</a></li>
+                        <li><a href="https://www.bmeb.gov.bd/" target="_blank" class="bangla-text">মাধ্যমিক ও উচ্চ মাধ্যমিক শিক্ষা বোর্ড</a><a href="https://www.bmeb.gov.bd/" target="_blank" class="english-text" style="display:none">Secondary & Higher Education Board</a></li>
+                    </ul>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="bangla-text">স্বাস্থ্য</h3>
+                    <h3 class="english-text" style="display:none">Health</h3>
+                    <ul class="service-list">
+                        <li><a href="https://dghs.gov.bd/" target="_blank" class="bangla-text">স্বাস্থ্য অধিদপ্তর</a><a href="https://dghs.gov.bd/" target="_blank" class="english-text" style="display:none">Directorate General of Health Services</a></li>
+                        <li><a href="https://www.dghs.gov.bd/index.php/bd/online-appointment" target="_blank" class="bangla-text">অনলাইন অ্যাপয়েন্টমেন্ট</a><a href="https://www.dghs.gov.bd/index.php/bd/online-appointment" target="_blank" class="english-text" style="display:none">Online Appointment</a></li>
+                        <li><a href="https://www.covid19.gov.bd/" target="_blank" class="bangla-text">কোভিড-19 তথ্য</a><a href="https://www.covid19.gov.bd/" target="_blank" class="english-text" style="display:none">COVID-19 Information</a></li>
+                    </ul>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="bangla-text">ব্যাংকিং ও অর্থ</h3>
+                    <h3 class="english-text" style="display:none">Banking & Finance</h3>
+                    <ul class="service-list">
+                        <li><a href="https://www.bb.org.bd/" target="_blank" class="bangla-text">বাংলাদেশ ব্যাংক</a><a href="https://www.bb.org.bd/" target="_blank" class="english-text" style="display:none">Bangladesh Bank</a></li>
+                        <li><a href="https://www.sonalibank.com.bd/" target="_blank" class="bangla-text">সোনালী ব্যাংক</a><a href="https://www.sonalibank.com.bd/" target="_blank" class="english-text" style="display:none">Sonali Bank</a></li>
+                        <li><a href="https://www.bkash.com/" target="_blank" class="bangla-text">বিকাশ</a><a href="https://www.bkash.com/" target="_blank" class="english-text" style="display:none">bKash</a></li>
+                        <li><a href="https://www.vat.gov.bd/" target="_blank" class="bangla-text">ভ্যাট অনলাইন</a><a href="https://www.vat.gov.bd/" target="_blank" class="english-text" style="display:none">VAT Online</a></li>
+                    </ul>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="bangla-text">পরিবহন</h3>
+                    <h3 class="english-text" style="display:none">Transportation</h3>
+                    <ul class="service-list">
+                        <li><a href="https://www.brta.gov.bd/" target="_blank" class="bangla-text">বিআরটিএ (ড্রাইভিং লাইসেন্স)</a><a href="https://www.brta.gov.bd/" target="_blank" class="english-text" style="display:none">BRTA (Driving License)</a></li>
+                        <li><a href="https://www.br.gov.bd/" target="_blank" class="bangla-text">বাংলাদেশ রেলওয়ে</a><a href="https://www.br.gov.bd/" target="_blank" class="english-text" style="display:none">Bangladesh Railway</a></li>
+                        <li><a href="https://www.biman-airlines.com/" target="_blank" class="bangla-text">বিমান বাংলাদেশ এয়ারলাইন্স</a><a href="https://www.biman-airlines.com/" target="_blank" class="english-text" style="display:none">Biman Bangladesh Airlines</a></li>
+                    </ul>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="bangla-text">ইউটিলিটি বিল</h3>
+                    <h3 class="english-text" style="display:none">Utility Bills</h3>
+                    <ul class="service-list">
+                        <li><a href="https://www.desco.org.bd/" target="_blank" class="bangla-text">ডেস্কো (বিদ্যুৎ বিল)</a><a href="https://www.desco.org.bd/" target="_blank" class="english-text" style="display:none">DESCO (Electricity)</a></li>
+                        <li><a href="https://www.wasa.gov.bd/" target="_blank" class="bangla-text">ওয়াসা (পানি বিল)</a><a href="https://www.wasa.gov.bd/" target="_blank" class="english-text" style="display:none">WASA (Water)</a></li>
+                        <li><a href="https://www.titasgas.org.bd/" target="_blank" class="bangla-text">টিটাস গ্যাস</a><a href="https://www.titasgas.org.bd/" target="_blank" class="english-text" style="display:none">Titas Gas</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="categories" style="margin-top: 30px;">
+                <div class="category-card">
+                    <h3 class="bangla-text">বেসরকারি সেবা</h3>
+                    <h3 class="english-text" style="display:none">Private Services</h3>
+                    <ul class="service-list">
+                        <li><a href="https://www.pathao.com/" target="_blank" class="bangla-text">পাঠাও (রাইড শেয়ারিং)</a><a href="https://www.pathao.com/" target="_blank" class="english-text" style="display:none">Pathao (Ride Sharing)</a></li>
+                        <li><a href="https://www.uber.com/bd/bn/" target="_blank" class="bangla-text">উবার বাংলাদেশ</a><a href="https://www.uber.com/bd/bn/" target="_blank" class="english-text" style="display:none">Uber Bangladesh</a></li>
+                        <li><a href="https://www.daraz.com.bd/" target="_blank" class="bangla-text">দারাজ (ই-কমার্স)</a><a href="https://www.daraz.com.bd/" target="_blank" class="english-text" style="display:none">Daraz (E-commerce)</a></li>
+                    </ul>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="bangla-text">টেলিকমিউনিকেশন</h3>
+                    <h3 class="english-text" style="display:none">Telecommunication</h3>
+                    <ul class="service-list">
+                        <li><a href="https://www.gp.gov.bd/" target="_blank" class="bangla-text">গ্রামীণফোন</a><a href="https://www.gp.gov.bd/" target="_blank" class="english-text" style="display:none">Grameenphone</a></li>
+                        <li><a href="https://www.banglalink.net/" target="_blank" class="bangla-text">বাংলালিংক</a><a href="https://www.banglalink.net/" target="_blank" class="english-text" style="display:none">Banglalink</a></li>
+                        <li><a href="https://www.robi.com.bd/" target="_blank" class="bangla-text">রবি</a><a href="https://www.robi.com.bd/" target="_blank" class="english-text" style="display:none">Robi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="bangla-text">আইন ও বিচার</h3>
+                    <h3 class="english-text" style="display:none">Law & Justice</h3>
+                    <ul class="service-list">
+                        <li><a href="http://www.justice.gov.bd/" target="_blank" class="bangla-text">আইন, বিচার ও সংসদ বিষয়ক মন্ত্রণালয়</a><a href="http://www.justice.gov.bd/" target="_blank" class="english-text" style="display:none">Ministry of Law, Justice</a></li>
+                        <li><a href="https://www.supremecourt.gov.bd/" target="_blank" class="bangla-text">সুপ্রিম কোর্ট</a><a href="https://www.supremecourt.gov.bd/" target="_blank" class="english-text" style="display:none">Supreme Court</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="values" class="values-container">
@@ -919,11 +1162,12 @@ footer {
         </div>
     </section>
 
-    <section id="services" class="services-section">
+    <!-- Cybersecurity Services Section -->
+    <section id="security-services" class="security-services-section">
         <div class="services-container">
             <div class="section-header">
-                <h2 class="bangla-text">আমাদের সেবা</h2>
-                <h2 class="english-text" style="display:none">Our Services</h2>
+                <h2 class="bangla-text">আমাদের সাইবার নিরাপত্তা সেবা</h2>
+                <h2 class="english-text" style="display:none">Our Cybersecurity Services</h2>
                 <p class="bangla-text">পেশাদার সাইবার নিরাপত্তা সেবা যা আপনার ডিজিটাল সম্পদ সুরক্ষিত রাখবে</p>
                 <p class="english-text" style="display:none">Professional cybersecurity services to protect your digital assets</p>
             </div>
@@ -1012,8 +1256,8 @@ footer {
         <div class="footer-content">
             <div class="footer-column">
                 <h3 class="bangla-text">Cyber Sentinel Bangladesh</h3>
-                <p class="bangla-text">বাংলাদেশের ডিজিটাল নিরাপত্তার রক্ষক হিসেবে আমরা নিবেদিত। নৈতিক হ্যাকিং, গবেষণা এবং প্রশিক্ষণের মাধ্যমে আমরা একটি নিরাপদ ডিজিটাল বাংলাদেশ গড়ে তুলতে কাজ করছি।</p>
-                <p class="english-text" style="display:none">We are committed as guardians of Bangladesh's digital security. Through ethical hacking, research and training, we are working to build a secure digital Bangladesh.</p>
+                <p class="bangla-text">বাংলাদেশের ডিজিটাল নিরাপত্তা ও সেবার রক্ষক হিসেবে আমরা নিবেদিত। নৈতিক হ্যাকিং, গবেষণা এবং প্রশিক্ষণের মাধ্যমে আমরা একটি নিরাপদ ডিজিটাল বাংলাদেশ গড়ে তুলতে কাজ করছি।</p>
+                <p class="english-text" style="display:none">We are committed as guardians of Bangladesh's digital security and services. Through ethical hacking, research and training, we are working to build a secure digital Bangladesh.</p>
             </div>
             <div class="footer-column">
                 <h3 class="bangla-text">যোগাযোগ</h3>
@@ -1043,7 +1287,12 @@ footer {
 
     <!-- Bangladesh Flag with National Anthem -->
     <div class="flag" id="bdFlag"></div>
-    <audio id="nationalAnthem" src="https://cabinet.portal.gov.bd/sites/default/files/files/cabinet.portal.gov.bd/page/e5f25d4e_f0a7_4b2a_a07c_3ec69a793516/bd_national_anthem.mp3" preload="auto"></audio>
+    <audio id="nationalAnthem" preload="auto">
+        <source src="https://cabinet.portal.gov.bd/sites/default/files/files/cabinet.portal.gov.bd/page/e5f25d4e_f0a7_4b2a_a07c_3ec69a793516//bd_national_anthem.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="secondSong" preload="auto">
+        <source src="https://www.music.com.bd/download/Music/L/Lalon%20Band/Biprotip/07%20-%20Lalon%20Band%20-%20Jaat%20Gelo%20%28music.com.bd%29.mp3" type="audio/mpeg">
+    </audio>
 
     <script>
         // Language Switch Functionality
@@ -1152,9 +1401,16 @@ footer {
         // National Anthem on Flag Click
         const bdFlag = document.getElementById('bdFlag');
         const nationalAnthem = document.getElementById('nationalAnthem');
+        const secondSong = document.getElementById('secondSong');
+        
+        let clickCount = 0;
 
         bdFlag.addEventListener('click', function() {
-            if (nationalAnthem.paused) {
+            clickCount++;
+            
+            // First click - play national anthem
+            if (clickCount === 1) {
+                nationalAnthem.currentTime = 0;
                 nationalAnthem.play().catch(e => {
                     console.log("Autoplay prevented. Please interact with the page first.");
                     if (document.body.classList.contains('english')) {
@@ -1163,9 +1419,18 @@ footer {
                         alert("অ্যানথেম বাজানোর জন্য প্রথমে পৃষ্ঠার যেকোনো স্থানে ক্লিক করুন, তারপর পতিকায় ক্লিক করুন।");
                     }
                 });
-            } else {
+            } 
+            // Second click - play second song
+            else if (clickCount === 2) {
                 nationalAnthem.pause();
-                nationalAnthem.currentTime = 0;
+                secondSong.currentTime = 0;
+                secondSong.play();
+            }
+            // Third click - stop all
+            else {
+                clickCount = 0;
+                nationalAnthem.pause();
+                secondSong.pause();
             }
         });
 
@@ -1240,6 +1505,38 @@ footer {
                     alert('Oops! There was a problem. Please try again later.');
                 } else {
                     alert('দুঃখিত! সমস্যা হয়েছে। পরে আবার চেষ্টা করুন।');
+                }
+            }
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('.search-box input');
+        const searchButton = document.querySelector('.search-box button');
+        
+        searchButton.addEventListener('click', function() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const serviceLinks = document.querySelectorAll('.service-list a');
+            let found = false;
+            
+            serviceLinks.forEach(link => {
+                const linkText = link.textContent.toLowerCase();
+                if (linkText.includes(searchTerm)) {
+                    found = true;
+                    link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    link.style.backgroundColor = 'rgba(0, 255, 65, 0.2)';
+                    link.style.color = 'var(--matrix-green)';
+                    setTimeout(() => {
+                        link.style.backgroundColor = '';
+                        link.style.color = '';
+                    }, 3000);
+                }
+            });
+            
+            if (!found) {
+                if (document.body.classList.contains('english')) {
+                    alert('No services found matching your search.');
+                } else {
+                    alert('আপনার খোঁজার সাথে মিলে যায় এমন কোন সেবা পাওয়া যায়নি।');
                 }
             }
         });
